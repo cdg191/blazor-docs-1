@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 #version=$(cat temp/dist/VERSION_SHORT | cut -d'-' -f 1)
 version='6.1.0-test'
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -15,4 +16,3 @@ git tag -a $version -m "$version" origin/production
 echo Pushing tag 
 git push origin $version
 git tag -d $version
-
