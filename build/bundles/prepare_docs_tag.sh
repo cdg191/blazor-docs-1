@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-version=$(cat temp/dist/VERSION_SHORT | cut -d'-' -f 1)
+#version=$(cat temp/dist/VERSION_SHORT | cut -d'-' -f 1)
+version='6.1.0-test'
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ $BRANCH != "production" ]; then
     git checkout production
